@@ -11,14 +11,16 @@
         <hr></hr>
         <div class="article">
             <h2><a href="about.html">About Page</a></h2>
-            <p>This is a summary of title article 1</p>
+            <p></p>
         </div>
         <hr></hr>
-        <div class="article">
-            <h2><a href="article_2.html">Article 2 Headline</a></h2>
-            <p>This is a summary of article 2</p>
-        </div>
-        <hr></hr>
+
+        {% for post in posts %}
+          <h1>{{post.posttitle}}</h1>
+          <p>{{post.postcontent}}</p>
+          <h4>Labels: <h5>{{post.postlabels}}</h5></h4>
+          <h2> ----------------------------</h2>
+        {% endfor %}
 
         <div class='footer'>
             <p>Footer Information</p>
